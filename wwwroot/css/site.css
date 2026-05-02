@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    text-align: center;
+    background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+    color: white;
+}
+
+/* YouTube */
+.video {
+    margin-top: 20px;
+}
+
+/* Animated card */
+.music-card {
+    width: 250px;
+    margin: 60px auto;
+    padding: 20px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(8px);
+    /* Animation */
+    animation: float 3s ease-in-out infinite, glow 2s ease-in-out infinite;
+}
+
+/* Floating up/down */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Glow pulse */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px #00f2ff;
+    }
+
+    50% {
+        box-shadow: 0 0 25px #00f2ff;
+    }
+
+    100% {
+        box-shadow: 0 0 5px #00f2ff;
+    }
+}

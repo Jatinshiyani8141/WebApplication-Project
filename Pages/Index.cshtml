@@ -1,0 +1,41 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Music Animation Page</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <h1>🎵 My Music Page</h1>
+
+    <!-- YouTube Video -->
+    <div class="video">
+        <iframe width="560" height="315"
+                src="https://www.youtube.com/embed/1ZYbU82GVz4"
+                title="NCS music mix"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+        </iframe>
+    </div>
+
+    <!-- Animated Card -->
+    <div class="music-card">
+        <h2>Now Playing</h2>
+        <p>My Favorite Song</p>
+    </div>
+
+</body>
+</html>
