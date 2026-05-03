@@ -1,29 +1,26 @@
-﻿// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿window.addEventListener("DOMContentLoaded", function () {
 
-// Write your JavaScript code.
-body {
-    margin: 0;
-    font - family: Arial, sans - serif;
-    background: linear - gradient(120deg, #1e3c72, #2a5298);
-    color: white;
-    text - align: center;
-}
+    const ball = document.getElementById("ball");
 
-.title {
-    margin - top: 20px;
-    font - size: 32px;
-}
+    let x = 100;
+    let y = 100;
+    let dx = 3;
+    let dy = 3;
 
-.video - container {
-    margin: 30px auto;
-}
+    function animate() {
 
-#box {
-    width: 50px;
-    height: 50px;
-    background - color: yellow;
-    position: relative;
-    margin: 20px auto;
-    border - radius: 10px;
-}
+        x += dx;
+        y += dy;
+
+        // Bounce from screen edges
+        if (x <= 0 || x >= window.innerWidth - 50) dx *= -1;
+        if (y <= 0 || y >= window.innerHeight - 50) dy *= -1;
+
+        ball.style.left = x + "px";
+        ball.style.top = y + "px";
+
+        requestAnimationFrame(animate);
+    }
+
+    animate();
+});
